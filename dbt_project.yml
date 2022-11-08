@@ -18,3 +18,12 @@ clean-targets:
 
 models:
   dbtlearn:
+    src:
+      +materialized: ephemeral
+      +schema: src_views
+    dim:
+      +materialized: table
+      +schema: dimension
+    fact:
+      +materialized: incremental
+      +schema: fact
