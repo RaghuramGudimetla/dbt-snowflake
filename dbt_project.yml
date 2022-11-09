@@ -27,3 +27,8 @@ models:
     fact:
       +materialized: incremental
       +schema: fact
+    mart:
+      +schema: mart
+
+seeds:
+  +schema: seeds
