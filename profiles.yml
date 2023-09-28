@@ -22,4 +22,11 @@ snowflake:
   outputs:
     sso:
       <<: *default
-      
+
+elementary:
+  target: elem
+  outputs:
+    elem:
+      <<: *default
+      database: "landing"
+      schema: "elementary"

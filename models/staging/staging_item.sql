@@ -31,4 +31,4 @@ select
     i_manager_id,
     i_product_name
 from
- items
+    items

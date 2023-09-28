@@ -17,25 +17,15 @@ clean-targets:
   - "dbt_packages"
 
 models:
-  dbt_experiments:
-    src:
-      +materialized: ephemeral
-      +schema: src_views
-    dim:
-      +materialized: table
-      +schema: dimension
-    fact:
-      +materialized: incremental
-      +schema: fact
-    mart:
-      +schema: mart
 
+  dbt_experiments:
     staging:
       +database: landing
       +schema: raw
 
+  elementary:
+    +database: landing
+    +schema: elementary
+
 seeds:
   +schema: seeds
-
-snapshots:
-  +schema: snapshots

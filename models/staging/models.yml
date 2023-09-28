@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: staging_item
+    description: This table is for items
+    columns:
+      - name: i_item_id
+        description: The unique identifier for the item
+        tests:
+          - not_null

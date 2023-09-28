@@ -8,7 +8,6 @@
 
     {%- else -%}
 
-        -- Custom schema name
         {{ custom_schema_name | trim }}
 
     {%- endif -%}
