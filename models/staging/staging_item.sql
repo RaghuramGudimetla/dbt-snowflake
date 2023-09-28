@@ -6,6 +6,9 @@
 
 with items as (
     select * from {{ source('sf10tcl', 'item')}}
+    {% if is_incremental() %}
+        where i_rec_start_date > (select max(i_rec_start_date) from {{ this }})
+    {% endif %}
 )
 select
     i_item_sk,

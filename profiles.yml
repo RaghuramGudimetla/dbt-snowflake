@@ -18,9 +18,9 @@ default: &default
 
 snowflake:
 
-  target: sso
+  target: login
   outputs:
-    sso:
+    login:
       <<: *default
 
 elementary:

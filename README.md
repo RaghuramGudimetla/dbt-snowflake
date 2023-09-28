@@ -13,3 +13,9 @@ Try running the following commands:
 - Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
 - Find [dbt events](https://events.getdbt.com) near you
 - Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+
+### Elementary
+- pip install elementary-data
+- dbt run -s elementary
+- make sure we have profile named elementary in the profiles.yml file
+- edr report --project-dir /c/Personal/dbt-snowflake (Any of the local path)

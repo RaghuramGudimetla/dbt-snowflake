@@ -3,8 +3,28 @@ version: 2
 models:
   - name: staging_item
     description: This table is for items
+
     columns:
+
       - name: i_item_id
         description: The unique identifier for the item
         tests:
           - not_null
+
+      - name: i_size
+        description: Size of the item
+        tests:
+          - accepted_values:
+                values: ['petite', 'extra large', 'economy', 'N/A', 'medium', 'large', 'small', null]
+
+
+  - name: staging_customer
+    description: This table is for customers
+
+    columns:
+
+      - name: c_customer_id
+        description: The unique identifier for the customer
+        tests:
+          - not_null
+          
