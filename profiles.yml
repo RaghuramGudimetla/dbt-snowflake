@@ -1,0 +1,25 @@
+default: &default
+    type: snowflake
+    account: "{{ env_var('DBT_SNOWFLAKE_ACCOUNT') }}"
+    user: "{{ env_var('DBT_SNOWFLAKE_USER') }}"
+    role: "{{ env_var('DBT_SNOWFLAKE_ROLE') }}"
+    password: "{{ env_var('DBT_SNOWFLAKE_PASSWORD') }}"
+    database: "{{ env_var('DBT_SNOWFLAKE_DATABASE') }}"
+    warehouse: "{{ env_var('DBT_SNOWFLAKE_WAREHOUSE') }}"
+    schema: "{{ env_var('DBT_SNOWFLAKE_SCHEMA') }}"
+    threads: 1
+    client_session_keep_alive: False
+
+    connect_retries: 3
+    connect_timeout: 10
+    retry_on_database_errors: False
+    retry_all: False
+    reuse_connections: False
+
+snowflake:
+
+  target: sso
+  outputs:
+    sso:
+      <<: *default
+      

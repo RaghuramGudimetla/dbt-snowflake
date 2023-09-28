@@ -1,0 +1,8 @@
+version: 2
+sources:
+  - name: sf10tcl
+    schema: tpcds_sf10tcl
+    tables:
+      - name: item
+      - name: store
+      - name: customer
