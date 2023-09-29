@@ -6,3 +6,4 @@ sources:
       - name: item
       - name: store
       - name: customer
+      - name: time_dim

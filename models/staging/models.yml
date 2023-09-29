@@ -1,5 +1,5 @@
 version: 2
-
+# Lazy to add all the columns. Just adding the ones that I will be writing tests for
 models:
   - name: staging_item
     description: This table is for items
