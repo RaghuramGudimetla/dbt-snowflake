@@ -19,7 +19,12 @@ clean-targets:
 models:
 
   dbt_experiments:
+
     staging:
+      +database: landing
+      +schema: raw
+
+    unloading:
       +database: landing
       +schema: raw
 
