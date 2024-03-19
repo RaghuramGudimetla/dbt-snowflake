@@ -1,5 +1,0 @@
-version: 2
-# Lazy to add all the columns. Just adding the ones that I will be writing tests for
-models:
-  - name: premium_customers
-    description: This table is for premium customer details to be exported

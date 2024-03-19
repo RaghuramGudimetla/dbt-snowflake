@@ -21,12 +21,14 @@ models:
   dbt_experiments:
 
     staging:
-      +database: landing
-      +schema: raw
-
-    unloading:
-      +database: landing
-      +schema: raw
+      +schema: staging
+      +materialized: view
+      covid:
+    
+    data_warehouse:
+      +schema: data_warehouse
+      +materialized: incremental
+        
 
   elementary:
     +database: landing

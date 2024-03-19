@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: dw_us_daily_aggregations
+    description: >
+      Table thats joined to see confirmed and deaths each day in US
+
+    columns:
+      - name: admin_name
+        description: Assuming this is admin name that entered this data
+        tests:
+            - not_null
+
+      - name: state
+        description: The state or province in US
+        tests:
+            - not_null
+
+      - name: confirmed_count
+        descriptions: Number of cases confirmed on a particular day
+
+      - name: deaths_count
+        descriptions: Number of deaths confirmed on a particular day
+
+      - name: recorded_date
+        descriptions: Date when these values are recorded

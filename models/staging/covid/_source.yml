@@ -1,0 +1,14 @@
+version: 2
+sources:
+- name: covid
+  database: covid
+  schema: raw
+  tables:
+    - name: countries_aggregated
+    - name: key_countries_pivoted
+    - name: reference
+    - name: time_series_covid_combined
+    - name: us_confirmed
+    - name: us_deaths
+    - name: us_simplified
+    - name: worldwide_aggregate
