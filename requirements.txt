@@ -1,0 +1,3 @@
+elementary-data
+dbt-core
+dbt-snowflake

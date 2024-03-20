@@ -1,11 +1,11 @@
 {{
     config(
-        alias='key_countries_pivoted',
-        unique_key='recorded_date'
+        alias='fct_key_countries_pivoted',
+        unique_key=['recorded_date'],
     )
 }}
 
-{%- set key_countries = ['China','US','Italy', 'France', 'Germany', 'Spain', 'Iran'] -%}
+{%- set key_countries = ['China','US','Italy', 'France', 'Germany', 'Spain', 'Iran', 'Australia'] -%}
 
 with countries_data as (
    select * from {{ ref('stg_covid__countries_aggregated') }}

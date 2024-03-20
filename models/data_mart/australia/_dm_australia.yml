@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: austraila_recordings_daily
+    description: >
+      Table with Austraila cases based on each state and day
+
+    columns:
+      - name: recorded_date
+        description: Date when these values are recorded
+
+      - name: state
+        description: Recorded metrics in particular state
+
+      - name: confirmed
+        description: Confirmed cases in a state each day
+
+      - name: recovered
+        descriptions: Recovered cases in a state per day
+
+      - name: deaths
+        descriptions: Deaths in a state per day
+
+
+  - name: australia_daily_aggregated
+    description: >
+      Sum of metrics in australia each day
+
+    columns:
+      - name: recorded_date
+        description: Date when these values are recorded
+
+      - name: confirmed_cases_count
+        description: Total confirmed cases each day in Australia
+
+      - name: recovered
+        descriptions: Total recovered cases each day in Australia
+
+      - name: deaths
+        descriptions: Total deaths each day in Australia

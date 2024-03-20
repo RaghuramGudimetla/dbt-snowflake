@@ -26,12 +26,23 @@ models:
       covid:
     
     data_warehouse:
+      +transient: false
       +schema: data_warehouse
       +materialized: incremental
-        
+      +query_tag: dw
+      +tags:
+        - "daily"
 
+    data_mart:
+      +transient: false
+      +query_tag: dm
+      +schema: data_mart
+      +materialized: incremental
+      +tags:
+        - "daily"
+        
   elementary:
-    +database: landing
+    +database: covid
     +schema: elementary
 
 seeds:

@@ -7,7 +7,7 @@ select
     "Confirmed"::NUMBER as confirmed_cases_count,
     "Recovered"::NUMBER as recovered_cases_count,
     "Deaths"::NUMBER as deaths_count,
-    "Increase rate"::FLOAT as daily_cases_increase_date,
+    "Increase rate"::FLOAT as daily_cases_increase_rate,
 
     -- date
     "Date"::date as recorded_date

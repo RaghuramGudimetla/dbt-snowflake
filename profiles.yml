@@ -28,5 +28,5 @@ elementary:
   outputs:
     elem:
       <<: *default
-      database: "landing"
+      database: "covid"
       schema: "elementary"

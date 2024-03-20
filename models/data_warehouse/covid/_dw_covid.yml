@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: dw_us_daily_aggregations
+  - name: dw_fct_us_daily_aggregations
     description: >
       Table thats joined to see confirmed and deaths each day in US
 
@@ -9,18 +9,105 @@ models:
       - name: admin_name
         description: Assuming this is admin name that entered this data
         tests:
-            - not_null
+          - not_null
 
       - name: state
         description: The state or province in US
         tests:
-            - not_null
+          - not_null
 
       - name: confirmed_count
         descriptions: Number of cases confirmed on a particular day
 
       - name: deaths_count
         descriptions: Number of deaths confirmed on a particular day
+
+      - name: recorded_date
+        descriptions: Date when these values are recorded
+
+
+  - name: dw_dim_locations
+    description: >
+      Dimension table for locations
+
+    columns:
+      - name: location_id
+        description: Location unique id. Ideally unique for combination of state and country
+        tests:
+          - not_null
+          - unique
+
+      - name: iso_2_country_code
+        description: Alpha-2 code of country
+
+      - name: iso_3_country_code
+        descriptions: Alpha-3 code of country
+
+      - name: admin_name
+        descriptions: Name of the admin who might have entered this record
+
+      - name: state
+        descriptions: State/Province name
+
+      - name: country
+        descriptions: Country name
+
+      - name: country_state
+        descriptions: Combination of country and state
+
+      - name: latitude
+        descriptions: Latitude value of the location
+
+      - name: longitude
+        descriptions: Longitude value of the location
+
+      - name: fips
+        description: Not sure what is this
+
+      - name: population
+        description: Population of the Province
+
+
+  - name: dw_fct_aggregated_cases_by_country
+    description: >
+      Aggregated cases by country (country code) 
+
+    columns:
+      - name: country_code
+        description: A country code
+
+      - name: confirmed_count
+        description: Count of cases confirmed on a particular day
+
+      - name: recovered_count
+        description: Count of cases recovered on a particular day
+
+      - name: deaths_count
+        description: Count of deaths on a particular day
+
+      - name: recorded_date
+        descriptions: Date when these values are recorded
+
+
+  - name: dw_fct_worldwide_recordings
+    description: >
+      Worldwide recordings table
+
+    columns:
+      - name: country
+        description: Name of the country recorded for
+
+      - name: state
+        description: State or province recorded for
+
+      - name: confirmed
+        description: Number of cases confirmed on a day
+
+      - name: recovered
+        description: Number of cases recovered on a day
+
+      - name: deaths
+        description: Number of deaths on a day
 
       - name: recorded_date
         descriptions: Date when these values are recorded

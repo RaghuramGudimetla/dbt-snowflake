@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: us_metrics_per_day
+    description: >
+      Table with total covid case metrics each day
+
+    columns:
+      - name: recorded_date
+        description: Date when these values are recorded
+        tests:
+          - not_null
+          - unique
+
+      - name: total_deaths
+        description: Total deaths in US per day
+
+      - name: total_confirmed_cases
+        descriptions: Total confirmed caces in US each day

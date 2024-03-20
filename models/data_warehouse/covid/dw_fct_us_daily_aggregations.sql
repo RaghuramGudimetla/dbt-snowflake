@@ -1,7 +1,7 @@
 {{
     config(
-        alias='us_daily_joined',
-        unique_key=['recorded_date', 'state', 'admin_name']
+        alias='fct_us_daily_joined',
+        unique_key=['recorded_date', 'state', 'admin_name'],
     )
 }}
 

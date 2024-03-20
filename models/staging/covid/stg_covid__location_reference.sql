@@ -3,11 +3,11 @@ with reference as (
 )
 select
     -- ids
-    "UID"::NUMBER as uid,
+    "UID"::NUMBER as location_id,
 
     -- strings
-    "iso2"::VARCHAR as iso_2,
-    "iso3"::VARCHAR as iso_3,
+    "iso2"::VARCHAR as iso_2_country_code,
+    "iso3"::VARCHAR as iso_3_country_code,
     "Admin2"::VARCHAR as admin_name,
     "Province_State"::VARCHAR as state,
     "Country_Region"::VARCHAR as country,
@@ -16,7 +16,7 @@ select
     -- numerics
     "Lat"::FLOAT as latitude,
     "Long_"::FLOAT as longitude,
-    "code3"::NUMBER as code_3,
+    "code3"::NUMBER as country_code,
     "FIPS"::NUMBER as fips,
     "Population"::NUMBER as population
 from
