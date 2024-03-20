@@ -6,16 +6,15 @@ Try running the following commands:
 - dbt run
 - dbt test
 
+### Source Data
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+Source data is coming from S3 bucket and is available in COVID.RAW
+It's in CSV format and we used INFER_SCHEMA to fetch the schema of each source table.
+Loaded it using storage integration.
 
 ### Elementary
 - pip install elementary-data
 - dbt run -s elementary
 - make sure we have profile named elementary in the profiles.yml file
 - edr report --project-dir /c/Personal/dbt-snowflake (Any of the local path)
+- edr report --project-name covid-dataset-model --env prod
