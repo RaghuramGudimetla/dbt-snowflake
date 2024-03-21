@@ -61,6 +61,11 @@ models:
       - name: longitude
         descriptions: Longitude value of the location
 
+      - name: country_code
+        descriptions: Country numeric code
+        tests:
+          - validate_minimum_value
+
       - name: fips
         description: Not sure what is this
 

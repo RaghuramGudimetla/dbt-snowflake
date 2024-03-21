@@ -14,6 +14,8 @@ models:
 
       - name: confirmed
         description: Confirmed cases in a state each day
+        tests:
+          - validate_minimum_value
 
       - name: recovered
         descriptions: Recovered cases in a state per day
