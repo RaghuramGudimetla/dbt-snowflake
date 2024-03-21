@@ -1,0 +1,44 @@
+version: 2
+
+models:
+  - name: worldwide_countries_aggregated_daily
+    description: >
+      Aggregated cases daily data by country
+
+    columns:
+      - name: country
+        description: Country name
+
+      - name: recorded_date
+        description: Date when these values are recorded
+
+      - name: confirmed_cases
+        description: Total confirmed cases per day in a country
+
+      - name: recovered_cases
+        description: Total recovered cases per day in a country
+      
+      - name: deaths
+        description: Total deaths per day in a country
+
+
+  - name: worldwide_aggregated_daily
+    description: >
+      Aggregated cases daily data by country
+
+    columns:
+
+      - name: recorded_date
+        description: Date when these values are recorded
+
+      - name: confirmed_cases
+        description: Total confirmed cases per day in a country
+
+      - name: recovered_cases
+        description: Total recovered cases per day in a country
+      
+      - name: deaths
+        description: Total deaths per day in a country
+
+      - name: percentage_increase_confirmed_cases
+        description: Percentage increase in number of confirmed cases
