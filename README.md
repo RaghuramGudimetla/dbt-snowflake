@@ -17,4 +17,4 @@ Loaded it using storage integration.
 - dbt run -s elementary
 - make sure we have profile named elementary in the profiles.yml file
 - edr report --project-dir /c/Personal/dbt-snowflake (Any of the local path)
-- edr report --project-name covid-dataset-model --env prod
+- edr report --project-name Covid Dataset Model --env prod

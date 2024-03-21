@@ -2,6 +2,7 @@
     config(
         alias='australia_daily_aggregated',
         incremental_strategy='append',
+        post_hook = "{{ unload_this('COVID.RAW.AWS_COVID_STAGE', 'COVID.RAW.JSON_EXPORT') }}"
     )
 }}
 
